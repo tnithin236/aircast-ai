@@ -1,0 +1,25 @@
+{
+  "selected_model": "LightGBM",
+  "test_split_from": "2019-09-04",
+  "selected": {
+    "MAE": 21.339161341094737,
+    "RMSE": 35.519511016142786,
+    "R2": 0.5640046809228865,
+    "sMAPE": 33.975016782421406
+  },
+  "best_baseline": {
+    "name": "Persistence",
+    "MAE": 21.45291401658481,
+    "RMSE": 38.62847689745581,
+    "R2": 0.4843404814552732
+  },
+  "beats_baseline_on_MAE": true,
+  "high_pollution": {
+    "threshold": 172.33,
+    "MAE": 66.11429383134517,
+    "RMSE": 89.41270288684832,
+    "R2": -0.8442682545961975,
+    "sMAPE": 29.622445987036244
+  },
+  "nonneg_clipping_note": "Predictions clipped at 0; unclipped metrics in model_comparison.csv"
+}

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+*.zip
+# raw data and downloaded weather are large / licensed: do not commit
+data/raw/*
+!data/raw/.gitkeep
+# keep processed data out of git by default; commit models/reports only if you choose to
+data/processed/*
+!data/processed/.gitkeep
+reports/alert_history.csv

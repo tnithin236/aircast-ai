@@ -1,0 +1,62 @@
+{
+  "model": "LightGBM",
+  "params": {
+    "n_estimators": 600,
+    "num_leaves": 15,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.7,
+    "reg_lambda": 5.0
+  },
+  "target": "PM2.5 (\u00b5g/m\u00b3)",
+  "strategy": "direct, one model per horizon",
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "train_range": [
+    "2015-01-01",
+    "2019-09-04"
+  ],
+  "note": "Final models refit on train+validation; test metrics come from the train-only fit.",
+  "trained_at": "2026-10-14T11:59:25.223123",
+  "source": "Kaggle rohanrao/air-quality-data-in-india (city_day.csv)",
+  "weather": "Open-Meteo archive, origin-day observations only",
+  "validation_MAE": 19.062989735219155,
+  "test_metrics": {
+    "selected_model": "LightGBM",
+    "test_split_from": "2019-09-04",
+    "selected": {
+      "MAE": 21.339161341094737,
+      "RMSE": 35.519511016142786,
+      "R2": 0.5640046809228865,
+      "sMAPE": 33.975016782421406
+    },
+    "best_baseline": {
+      "name": "Persistence",
+      "MAE": 21.45291401658481,
+      "RMSE": 38.62847689745581,
+      "R2": 0.4843404814552732
+    },
+    "beats_baseline_on_MAE": true,
+    "high_pollution": {
+      "threshold": 172.33,
+      "MAE": 66.11429383134517,
+      "RMSE": 89.41270288684832,
+      "R2": -0.8442682545961975,
+      "sMAPE": 29.622445987036244
+    },
+    "nonneg_clipping_note": "Predictions clipped at 0; unclipped metrics in model_comparison.csv"
+  },
+  "versions": {
+    "python": "3.13.15",
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3"
+  }
+}
