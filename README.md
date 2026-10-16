@@ -1,5 +1,8 @@
 # AirCast AI: Air Quality Forecasting & Pollution Alert System
 
+<img width="1917" height="1020" alt="Screenshot 2026-10-16 111457" src="https://github.com/user-attachments/assets/236f2814-b846-4adf-9e84-7c7a438e8789" />
+
+
 Seven-day daily **PM2.5** forecasts for Indian cities, built from historical CPCB city-day data and Open-Meteo weather, with SHAP explanations, configurable threshold alerts and a Streamlit dashboard.
 
 > Educational forecasting and decision-support tool. Forecasts are model estimates, not official measurements, and alerts are not government or public-health warnings.
